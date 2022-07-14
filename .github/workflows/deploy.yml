@@ -1,0 +1,22 @@
+name: "CDK Deployment"
+
+on:
+  push:
+    branches:
+      - "main"
+      - "develop"
+
+jobs:
+  deployment:
+    name: 'CDK DEPLOYMENT'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: "source code checkout"
+        run: actions/checkout@v3
+      - name: "npm i -g aws-cdk"
+        run: cdk synth
+      - name: "cdk synth"
+        run: cdk synth
+
+
