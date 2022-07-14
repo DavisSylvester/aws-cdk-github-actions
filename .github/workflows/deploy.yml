@@ -12,8 +12,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: "source code checkout"
-        run: actions/checkout@v3
+      - name: Check out repository code
+        uses: actions/checkout@v3
       - name: "npm i -g aws-cdk"
         run: cdk synth
       - name: "cdk synth"
