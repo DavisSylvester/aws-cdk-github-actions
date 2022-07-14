@@ -6,7 +6,7 @@ export const stackConfig = {
                     {
                     "buckets": [
                         {
-                            name: ''
+                            name: 'profile-pictures'
                         }
                     ],
                     "lambdas": [
