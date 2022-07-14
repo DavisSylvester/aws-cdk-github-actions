@@ -14,9 +14,10 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
-      - name: "sudo npm i -g aws-cdk"
+      - name: "AWS CDK Installation"
+        run:  sudo npm i -g aws-cdk
+      - name: "Synth"
         run: cdk synth
-      - name: "cdk synth"
-        run: cdk synth
+      
 
 
