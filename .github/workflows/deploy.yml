@@ -18,8 +18,10 @@ jobs:
         run:  sudo npm i -g aws-cdk
       - name: "Install NPM Modules"
         run:  npm i
-      - name: "Synth"
-        run: cdk synth
-      
+      - name: "AWS Creds"
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          role-to-assume: arn:aws:iam::313327262346:role/Admin
+          aws-region: us-east-1
 
 
