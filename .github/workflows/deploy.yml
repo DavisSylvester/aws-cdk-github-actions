@@ -20,8 +20,9 @@ jobs:
         run:  npm i
       - name: "AWS Creds"
         uses: aws-actions/configure-aws-credentials@v1
+        continue-on-error: false
         with:
-          role-to-assume: arn:aws:iam::313327262346:role/Admin
+          role-to-assume: ${{ secrets.AWS_DEPLOYMENT_ROLE }}
           aws-region: us-east-1
 
 
