@@ -21,7 +21,7 @@ jobs:
       - name: "AWS Creds"
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          role-to-assume: arn:aws:iam::313327262346:role/Admin
+          role-to-assume: "arn:aws:iam::313327262346:role/Admin"
           aws-region: us-east-1
 
 
