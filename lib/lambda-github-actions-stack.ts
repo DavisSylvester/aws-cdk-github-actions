@@ -35,10 +35,10 @@ export class LambdaGithubActionsStack extends Stack {
     const angularAppBucket = new Bucket(this, 'web-deploy', bucketProps);
 
     
-    const bucketDeploymentProps: BucketDeploymentProps = {
-      sources: [Source.asset("/Users/dsylv/projects/samples/angular-demo/dist/angular-demo")],
-      destinationBucket: angularAppBucket
-    };
-    new BucketDeployment(this, 'angular-app-deploy', bucketDeploymentProps)
+    // const bucketDeploymentProps: BucketDeploymentProps = {
+    //   sources: [Source.asset("/Users/dsylv/projects/samples/angular-demo/dist/angular-demo")],
+    //   destinationBucket: angularAppBucket
+    // };
+    // new BucketDeployment(this, 'angular-app-deploy', bucketDeploymentProps)
   }
 }
